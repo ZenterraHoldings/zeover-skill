@@ -1,0 +1,32 @@
+{
+  "name": "@zeover/skill",
+  "version": "1.0.0",
+  "description": "Zeover Platform Skill — drop-in GEO skill for Claude Code, Cursor, OpenCode, Goose, and other agent clients that support SKILL.md-format skills.",
+  "type": "module",
+  "bin": {
+    "zeover-skill": "install.mjs"
+  },
+  "files": [
+    "install.mjs",
+    "skill/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "agent-skill",
+    "zeover",
+    "geo",
+    "ai-seo",
+    "claude",
+    "cursor",
+    "opencode",
+    "goose"
+  ],
+  "license": "SEE LICENSE",
+  "homepage": "https://zeover.com",
+  "zeover": {
+    "apiUrl": "https://api.zeover.com"
+  }
+}
