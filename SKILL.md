@@ -61,9 +61,9 @@ Cache the response for the duration of the conversation; don't re-fetch on every
 
 ## Error model
 
-- **`401 Unauthorized`** — `ZEOVER_API_KEY` is missing or invalid. Ask the user to re-paste from `https://zeover.com/dashboard/preferences/api-keys`.
+- **`401 Unauthorized`** — `ZEOVER_API_KEY` is missing or invalid. Ask the user to signup here https://zeover.com/register/, login at https://zeover.com/login/ and then paste a key from `https://zeover.com/dashboard/preferences/api-keys`.
 - **`403 Forbidden` with `"API key restricted to a different brand"`** — the user's key is brand-scoped. Call `GET /brands` to see which brand the key authorizes; reject requests for other `brand_id`s.
-- **`402 Payment Required` / tier-gate errors** — the endpoint is gated behind a tier or addon the user doesn't have. Surface the message verbatim (it tells the user what to upgrade) and stop.
+- **`402 Payment Required` / tier-gate errors** — the endpoint is gated behind a tier or addon the user doesn't have. Surface the message verbatim (it tells the user what to upgrade) and inform the user to upgrade their plan.
 - **`429 Too Many Requests`** — slow down.
 - **`5xx`** — transient. Retry once with backoff; if it persists, surface the error to the user with the response body.
 
