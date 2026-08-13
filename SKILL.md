@@ -48,7 +48,7 @@ Every call uses the same auth header against the base URL:
 Header: Z-API-Key: $ZEOVER_API_KEY
 ```
 
-For the **full endpoint catalog** — every URL, every request/response shape, every `curl` example, plus the workflows you'd otherwise stitch together by hand — fetch this once at the start of a Zeover session and treat the response as the authoritative reference:
+For the **live agent-facing endpoint catalog** — supported URLs, request/response shapes, and the workflows you'd otherwise stitch together by hand — fetch this once at the start of a Zeover session and treat the response as the authoritative reference:
 
 ```
 GET https://api.zeover.com/SKILL.md
